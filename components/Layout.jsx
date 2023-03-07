@@ -9,13 +9,15 @@ const Layout = ({ children }) => {
       <Head>
         <title>Book Store</title>
       </Head>
-      <header>
-        <Navbar />
-      </header>
-      <main>{children}</main>
-      <footer>
-        <Footer />
-      </footer>
+      <div className="max-w-[1240px] m-auto">
+        <header>
+          <Navbar />
+        </header>
+        <main>{children}</main>
+        <footer>
+          <Footer />
+        </footer>
+      </div>
     </div>
   );
 };
