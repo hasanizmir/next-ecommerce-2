@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const ProductItem = ({ product }) => {
   return (
-    <div className=" w-full md:w-[32%] box-content bg-white rounded-lg overflow-hidden shadow-lg relative">
+    <div className=" w-full md:w-[48%] lg:w-[32%] box-content bg-white rounded-lg overflow-hidden shadow-lg relative">
       <Link href={`/product/${product.isbn13}`}>
         <Image
           className="w-full"
