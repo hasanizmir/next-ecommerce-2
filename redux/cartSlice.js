@@ -31,6 +31,9 @@ const cartSlice = createSlice({
       const index = state.items.findIndex((item) => item.isbn13 === action.payload);
       state.items.splice(index, 1);
     },
+    clearCart: (state) => {
+      state.items = [];
+    },
   },
 });
 
@@ -41,4 +44,5 @@ export const {
   incrementQuantity,
   decrementQuantity,
   removeFromCart,
+  clearCart
 } = cartSlice.actions;
