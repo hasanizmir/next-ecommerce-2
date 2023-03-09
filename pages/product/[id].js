@@ -2,11 +2,17 @@ import axios from "axios";
 import Image from "next/image";
 import React from "react";
 import { useDispatch } from "react-redux";
+import { toast } from "react-hot-toast";
 
 import { addToCart } from "@/redux/cartSlice";
 
 const ProductDetail = ({ data }) => {
   const dispatch = useDispatch();
+
+  const handleAddToCart = (data) => {
+    dispatch(addToCart(data))
+    toast.success('Succesfully added..');
+  }
 
   return (
     <>
@@ -37,8 +43,8 @@ const ProductDetail = ({ data }) => {
                 </p>
                 <button
                   type="button"
-                  className="inline-flex items-center rounded-md border border-transparent bg-red-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-sky-900  mt-4"
-                  onClick={() => dispatch(addToCart(data))}
+                  className="btn-primary"
+                  onClick={() => handleAddToCart(data)}
                 >
                   Add to Cart
                 </button>

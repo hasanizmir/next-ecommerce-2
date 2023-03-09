@@ -6,6 +6,10 @@
   .nav-link {
     @apply text-black hover:text-red-500 transition-colors duration-500 mr-5;
   }
+
+  .btn-primary {
+    @apply inline-flex items-center rounded-md border border-transparent bg-red-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-red-800 transition-all duration-500 mt-4
+  }
 }
 
 :root {
