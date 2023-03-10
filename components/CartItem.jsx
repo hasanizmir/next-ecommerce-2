@@ -18,15 +18,15 @@ const CartItem = ({ product }) => {
     toast.success("Succesfully removed...");
   };
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex flex-col sm:flex-row items-center justify-center space-y-6">
       <Image src={product.image} alt={product.title} width={100} height={100} />
-      <div className="p-4 w-2/4">
+      <div className="p-4 w-full sm:w-2/4">
         <Link href={`/product/${product.isbn13}`}>
           <h2 className="font-bold text-lg mb-2">{product.title}</h2>
           <p className="text-gray-700 text-base">{product.subtitle}</p>
         </Link>
       </div>
-      <div className="flex space-x-2 h-6 items-center justify-center w-1/4">
+      <div className="flex space-x-2 h-6 items-center justify-center w-full sm:w-1/4">
         <button
           disabled={product.quantity === 1}
           className="w-6 h-6 rounded-full border flex items-center justify-center bg-gray-100"
@@ -48,7 +48,7 @@ const CartItem = ({ product }) => {
           +
         </button>
       </div>
-      <div className="w-1/4 flex justify-between mr-4">
+      <div className="w-full sm:w-1/4 flex justify-between mr-4">
         <span className="font-semibold">{product.price}</span>
         <span
           className="text-red-600"

@@ -30,7 +30,7 @@ const Cart = () => {
         </p>
       )}
       {cart.length > 0 && (
-        <div className="flex justify-end mr-6">
+        <div className="flex justify-end mr-6 mt-10">
           <span className="font-bold text-2xl">
             Total Price: ${totalPrice.toFixed(2)}
           </span>
